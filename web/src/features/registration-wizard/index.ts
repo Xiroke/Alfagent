@@ -1,0 +1,5 @@
+export { RegistrationWizard } from "./registration-wizard"
+export { useRegistrationWizardStore } from "./store"
+export { useWizardNavigation, WIZARD_STEPS } from "./hooks/use-wizard-navigation"
+export { useOwnershipShares } from "./hooks/use-ownership-shares"
+export type * from "./types"
