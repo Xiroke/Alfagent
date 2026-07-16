@@ -18,6 +18,8 @@ RUN pip install --upgrade pip \
 COPY alembic.ini .
 COPY alembic ./alembic
 COPY app ./app
+COPY scripts/__init__.py ./scripts/
+COPY scripts/seed.py ./scripts/
 COPY docker/backend/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh \
     && useradd --create-home --uid 10001 appuser \
@@ -27,7 +29,8 @@ USER appuser
 
 EXPOSE 8000
 
-HEALTHCHECK --interval=15s --timeout=5s --start-period=40s --retries=5 \
+# Extra start time for migrations + first-run embedding seed
+HEALTHCHECK --interval=15s --timeout=5s --start-period=120s --retries=5 \
   CMD curl -fsS http://127.0.0.1:8000/health || exit 1
 
 ENTRYPOINT ["/entrypoint.sh"]

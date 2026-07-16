@@ -73,6 +73,7 @@ services:
       RAG_SIMILARITY_THRESHOLD: ${RAG_SIMILARITY_THRESHOLD:-0.35}
       EMBEDDING_DIMENSIONS: ${EMBEDDING_DIMENSIONS:-1024}
       UVICORN_WORKERS: ${UVICORN_WORKERS:-2}
+      RUN_SEED: ${RUN_SEED:-true}
     networks:
       - alfagent
     expose:
