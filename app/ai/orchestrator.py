@@ -10,12 +10,13 @@ from uuid import UUID
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.ai.agents.base import AgentRegistry, AgentReplyContext, build_default_registry
-from app.ai.clients.openrouter import OpenRouterClient
+from app.ai.clients.llm import LLMClient
 from app.ai.rag.retriever import RAGRetriever
 from app.ai.router.intent_classifier import IntentClassifier, IntentResult
 from app.core.config import Settings, get_settings
 from app.domain.agents import AgentType
 from app.infrastructure.models import Company
+from app.infrastructure.repositories.knowledge import RetrievedChunk
 
 logger = logging.getLogger(__name__)
 
@@ -45,7 +46,7 @@ class MultiAgentOrchestrator:
     def __init__(
         self,
         session: AsyncSession,
-        client: OpenRouterClient,
+        client: LLMClient,
         settings: Settings | None = None,
         registry: AgentRegistry | None = None,
     ) -> None:
@@ -63,6 +64,7 @@ class MultiAgentOrchestrator:
         forced_agent: AgentType | None = None,
         company_id: UUID | None = None,
         company_profile: str | None = None,
+        history: list[dict[str, str]] | None = None,
     ) -> AsyncIterator[ChatStreamEvent]:
         intent = await self._classifier.classify(message, forced_agent=forced_agent)
         yield ChatStreamEvent(
@@ -79,29 +81,48 @@ class MultiAgentOrchestrator:
         if profile is None and company_id is not None:
             profile = await self._load_company_profile(company_id)
 
-        chunks = await self._retriever.retrieve_for_agent(message, intent.agent)
-        yield ChatStreamEvent(
-            event="rag",
-            data={
-                "chunk_count": len(chunks),
-                "sources": [
-                    {
-                        "id": str(c.id),
-                        "source": c.source,
-                        "category": c.category,
-                        "title": c.title,
-                        "score": round(c.score, 4),
-                    }
-                    for c in chunks
-                ],
-            },
-        )
+        chunks: list[RetrievedChunk] = []
+        try:
+            chunks = await self._retriever.retrieve_for_agent(message, intent.agent)
+            yield ChatStreamEvent(
+                event="rag",
+                data={
+                    "chunk_count": len(chunks),
+                    "sources": [
+                        {
+                            "id": str(c.id),
+                            "source": c.source,
+                            "category": c.category,
+                            "title": c.title,
+                            "score": round(c.score, 4),
+                        }
+                        for c in chunks
+                    ],
+                },
+            )
+        except Exception as exc:
+            logger.warning("RAG retrieval failed, continuing without context: %s", exc)
+            yield ChatStreamEvent(
+                event="rag",
+                data={
+                    "chunk_count": 0,
+                    "sources": [],
+                    "error": str(exc),
+                },
+            )
+
+        prior = [
+            {"role": str(item.get("role", "")), "content": str(item.get("content", ""))}
+            for item in (history or [])
+            if item.get("role") in {"user", "assistant"} and str(item.get("content", "")).strip()
+        ]
 
         agent = self._registry.get(intent.agent)
         ctx = AgentReplyContext(
             user_message=message,
             rag_chunks=chunks,
             company_profile=profile,
+            history=prior,
         )
 
         yield ChatStreamEvent(event="agent_start", data={"agent": intent.agent.value})

@@ -1,0 +1,320 @@
+{
+  "hero": {
+    "title": "Открой свой бизнес вместе с сервисами Альфа-Банка",
+    "subtitle": "Откройте бизнес быстро, в любой точке страны",
+    "cta": "Открыть бизнес",
+    "images": []
+  },
+  "tabs": [
+    "Дебетовые карты",
+    "Суперкэшбэк до 100%",
+    "Кредитные карты",
+    "Обслуживание 0 ₽",
+    "Кредиты",
+    "Оформление онлайн"
+  ],
+  "product_cards": [
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/25/51/1449/D_CardPromo_267_298_vertical_dc.png",
+      "title": "Дебетовые карты",
+      "subtitle": "Суперкэшбэк до 100%"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/91/be/1449/D_CardPromo_267x298_230524.png",
+      "title": "Кредитные карты",
+      "subtitle": "Обслуживание 0 ₽"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/b3/74/2330/CardPromo_267x298_121123-4.png",
+      "title": "Кредиты",
+      "subtitle": "Оформление онлайн"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/e3/cf/2330/CardPromo_267x298_121123-2.png",
+      "title": "Накопления",
+      "subtitle": "Доход с первого месяца"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/20/9a/1449/D_CardPromo_267x298-15122025.png",
+      "title": "Инвестиции",
+      "subtitle": "Гарантируем 30% годовых"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/90/85/2330/CardPromo_267x298_121123-3.png",
+      "title": "Ипотека",
+      "subtitle": "Одобрим за 60 секунд"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/c9/0c/1449/D_CardPromo_267x298_071024.png",
+      "title": "Alfa Only",
+      "subtitle": "Ваш премиальный сервис"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/0d/ce/1449/D_CardPromo_267x298_120924.png",
+      "title": "Для детей и семьи",
+      "subtitle": "Карты с кэшбэком"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/07/a9/7110/D_CardPromo_267x298_221223-8.jpg",
+      "title": "Регистрация бизнеса",
+      "subtitle": "Онлайн за 0 ₽"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/f4/4d/7110/D_CardPromo_267x298_221223-1.jpg",
+      "title": "Счёт для бизнеса",
+      "subtitle": "Бесплатно"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/97/89/1449/D_CardPromo_267x298_3_18042025.png",
+      "title": "Кредиты",
+      "subtitle": "На развитие бизнеса"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/68/28/7110/D_CardPromo_267x298_221223-10.jpg",
+      "title": "Эквайринг",
+      "subtitle": "Комиссия от 1%"
+    }
+  ],
+  "side_cards": [
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/d7/ba/1449/D_MainBento_412x128_020925.png",
+      "title": "Кредит наличными",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/58/82/1449/D_MainBento_dk_412x128_040425.png",
+      "title": "Бесплатная Альфа‑Карта",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/02/ed/1449/D_MainBento_267x273_230524.png",
+      "title": "Кредитная карта",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/0e/cc/1449/D_MainBento_267x273_01_10072026-invest.jpg",
+      "title": "Гарантируем доход",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/e3/cf/2330/CardPromo_267x298_121123-2.png",
+      "title": "Накопления",
+      "subtitle": "Доход с первого месяца"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/20/9a/1449/D_CardPromo_267x298-15122025.png",
+      "title": "Инвестиции",
+      "subtitle": "Гарантируем 30% годовых"
+    }
+  ],
+  "promo_cards": [
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/02/4f/1449/D_CardPromo_364x364_030326.png",
+      "title": "Зарабатывайте играючи",
+      "subtitle": "Получайте деньги, умножайте кэшбэк, забирайте айфоны и другие гаджеты в играх Альфа‑Банка"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/dc/75/1449/D_CardPromo_364x364_260724.png",
+      "title": "Высокие ставки по Альфа‑Вкладу",
+      "subtitle": "Растим ваши накопления в рублях и в юанях"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/ce/3d/1449/D_CardPromo_364-364_25112025.png",
+      "title": "Альфа‑Карта с гравировкой",
+      "subtitle": "Закажите карту из лимитированной серии с кастомным дизайном"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/8a/9a/1449/D_CardPromo_364x364_190525.png",
+      "title": "+1 категория кэшбэка",
+      "subtitle": "Получайте больше выгоды и привилегий с Альфа‑Смарт"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/13/5c/1449/D_PureCard_364x364_150125.png",
+      "title": "Безопасные расчёты за 0 ₽",
+      "subtitle": "Поддержим любые ваши сделки с недвижимостью"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/d7/48/1449/D_CardPromo_364x364_2-13022026.png",
+      "title": "Премиальный сервис Alfa Only",
+      "subtitle": "Путешествия с привилегиями и кэшбэк 10% в лучших ресторанах"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/4f/19/1449/D_CardPromo_364x364_170924_2.png",
+      "title": "Кредит наличными",
+      "subtitle": "Получите решение онлайн за 2 минуты"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/e9/51/1449/D_CardPromo_364x364_100725.png",
+      "title": "Бесплатная кредитная карта",
+      "subtitle": "Одобрим за минуту"
+    }
+  ],
+  "travel": {
+    "img": "https://alfabank.servicecdn.ru/site-upload/70/9f/1449/D001_KV_1140x208_10072026.jpg",
+    "title": "Узнайте, где заправиться",
+    "subtitle": "Открытые АЗС и доступные виды топлива: в реальном времени на карте"
+  },
+  "employer": {
+    "img": "https://alfabank.servicecdn.ru/site-upload/ab/d0/1449/D_CardPure_558x444_200126.png",
+    "title": "Альфа‑Банк — лучший работодатель России",
+    "subtitle": "Третий год подряд по версии HeadHunter"
+  },
+  "smart": {
+    "img": "https://alfabank.servicecdn.ru/site-upload/9b/7b/1449/D_CardPure_1140x244_090625_2.png",
+    "title": "Не нашли нужную информацию? Попробуйте умный поиск",
+    "subtitle": "Поможем разобраться в условиях продуктов и найти нужный"
+  },
+  "all_cards_sample": [
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/09/a6/1449/Desk_Bento_Primary-vklad-15072026.png",
+      "title": "Альфа‑Вклад",
+      "subtitle": "Успейте получить 20% годовых — только до 31 августа"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/d7/ba/1449/D_MainBento_412x128_020925.png",
+      "title": "Кредит наличными",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/58/82/1449/D_MainBento_dk_412x128_040425.png",
+      "title": "Бесплатная Альфа‑Карта",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/02/ed/1449/D_MainBento_267x273_230524.png",
+      "title": "Кредитная карта",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/0e/cc/1449/D_MainBento_267x273_01_10072026-invest.jpg",
+      "title": "Гарантируем доход",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/25/51/1449/D_CardPromo_267_298_vertical_dc.png",
+      "title": "Дебетовые карты",
+      "subtitle": "Суперкэшбэк до 100%"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/91/be/1449/D_CardPromo_267x298_230524.png",
+      "title": "Кредитные карты",
+      "subtitle": "Обслуживание 0 ₽"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/b3/74/2330/CardPromo_267x298_121123-4.png",
+      "title": "Кредиты",
+      "subtitle": "Оформление онлайн"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/e3/cf/2330/CardPromo_267x298_121123-2.png",
+      "title": "Накопления",
+      "subtitle": "Доход с первого месяца"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/20/9a/1449/D_CardPromo_267x298-15122025.png",
+      "title": "Инвестиции",
+      "subtitle": "Гарантируем 30% годовых"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/90/85/2330/CardPromo_267x298_121123-3.png",
+      "title": "Ипотека",
+      "subtitle": "Одобрим за 60 секунд"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/c9/0c/1449/D_CardPromo_267x298_071024.png",
+      "title": "Alfa Only",
+      "subtitle": "Ваш премиальный сервис"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/0d/ce/1449/D_CardPromo_267x298_120924.png",
+      "title": "Для детей и семьи",
+      "subtitle": "Карты с кэшбэком"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/07/a9/7110/D_CardPromo_267x298_221223-8.jpg",
+      "title": "Регистрация бизнеса",
+      "subtitle": "Онлайн за 0 ₽"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/f4/4d/7110/D_CardPromo_267x298_221223-1.jpg",
+      "title": "Счёт для бизнеса",
+      "subtitle": "Бесплатно"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/97/89/1449/D_CardPromo_267x298_3_18042025.png",
+      "title": "Кредиты",
+      "subtitle": "На развитие бизнеса"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/68/28/7110/D_CardPromo_267x298_221223-10.jpg",
+      "title": "Эквайринг",
+      "subtitle": "Комиссия от 1%"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/0c/91/1449/D_CardPromo_267x298_5_18042025.png",
+      "title": "Карты",
+      "subtitle": "С кэшбэком до 10%"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/ce/a3/60/D_CardPromo_267x298_dep.png",
+      "title": "Депозиты",
+      "subtitle": "Онлайн от 1 дня"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/6b/a8/7110/D_CardPromo_267x298_221223-6.jpg",
+      "title": "Отраслевые решения",
+      "subtitle": "Для любого бизнеса"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/ae/91/7110/D_CardPromo_267x298_221223-7.jpg",
+      "title": "Всё для малого бизнеса",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/07/a9/7110/D_CardPromo_267x298_221223-8.jpg",
+      "title": "Расчётный счёт",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/b8/47/7110/D_CardPromo_267x298_221223-9.jpg",
+      "title": "Кредиты",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/ca/fa/7110/D_CardPromo_267x298_221223-11.jpg",
+      "title": "Факторинг",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/00/16/7110/D_CardPromo_267x298_221223-12.jpg",
+      "title": "Зарплатный проект",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/12/05/7110/D_CardPromo_267x298_221223-13.jpg",
+      "title": "ВЭД",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/1e/ff/7110/D_CardPromo_267x298_221223-14.jpg",
+      "title": "Инвестбанк",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/4b/c2/7110/D_CardPromo_267x298_221223-15.jpg",
+      "title": "Всё для крупного бизнеса",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/02/4f/1449/D_CardPromo_364x364_030326.png",
+      "title": "Зарабатывайте играючи",
+      "subtitle": "Получайте деньги, умножайте кэшбэк, забирайте айфоны и другие гаджеты в играх Альфа‑Банка"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-presets/fe/f3/529/D_CardPromo_328x195_DFBFFF-big.png",
+      "title": "Платим до 7000 ₽ за рекомендации",
+      "subtitle": "Приглашайте друзей в Альфа-Банк и зарабатывайте"
+    }
+  ],
+  "card_count": 64
+}

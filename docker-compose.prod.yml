@@ -1,0 +1,126 @@
+# Production stack: Postgres + FastAPI + nginx (TLS) + Let's Encrypt
+#
+# Usage:
+#   cp .env.prod.example .env.prod   # set DOMAIN, LETSENCRYPT_EMAIL, secrets
+#   docker compose -f docker-compose.prod.yml --env-file .env.prod up -d --build
+#   # DNS A/AAAA must point here; ports 80/443 open. Certbot issues LE cert on start.
+#   # Or force issue: ./scripts/init-letsencrypt.sh
+#
+# App: https://${DOMAIN}  (HTTP redirects to HTTPS)
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: alfagent-prod-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-alfagent}
+      POSTGRES_USER: ${POSTGRES_USER:-alfagent}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env.prod}
+    volumes:
+      - alfagent_prod_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-alfagent} -d ${POSTGRES_DB:-alfagent}",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    command:
+      - postgres
+      - -c
+      - max_connections=200
+      - -c
+      - shared_buffers=256MB
+      - -c
+      - effective_cache_size=768MB
+      - -c
+      - work_mem=16MB
+    networks:
+      - alfagent
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    container_name: alfagent-prod-api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      APP_NAME: Alfagent
+      APP_ENV: production
+      DEBUG: "false"
+      API_V1_PREFIX: /api/v1
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-alfagent}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-alfagent}
+      DB_POOL_SIZE: ${DB_POOL_SIZE:-20}
+      DB_MAX_OVERFLOW: ${DB_MAX_OVERFLOW:-10}
+      DB_ECHO: "false"
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env.prod}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-60}
+      API_KEY: ${API_KEY:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://foundation-models.api.cloud.ru/v1}
+      LLM_CHAT_MODEL: ${LLM_CHAT_MODEL:-ai-sage/GigaChat3-10B-A1.8B}
+      LLM_CLASSIFIER_MODEL: ${LLM_CLASSIFIER_MODEL:-ai-sage/GigaChat3-10B-A1.8B}
+      LLM_EMBEDDING_MODEL: ${LLM_EMBEDDING_MODEL:-Qwen/Qwen3-Embedding-0.6B}
+      LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-60}
+      LLM_MAX_TOKENS: ${LLM_MAX_TOKENS:-2500}
+      RAG_TOP_K: ${RAG_TOP_K:-5}
+      RAG_SIMILARITY_THRESHOLD: ${RAG_SIMILARITY_THRESHOLD:-0.35}
+      EMBEDDING_DIMENSIONS: ${EMBEDDING_DIMENSIONS:-1024}
+      UVICORN_WORKERS: ${UVICORN_WORKERS:-2}
+    networks:
+      - alfagent
+    expose:
+      - "8000"
+
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    container_name: alfagent-prod-nginx
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      DOMAIN: ${DOMAIN:-localhost}
+    ports:
+      - "${HTTP_PORT:-80}:80"
+      - "${HTTPS_PORT:-443}:443"
+    volumes:
+      - certbot_www:/var/www/certbot
+      - certbot_certs:/etc/letsencrypt
+    networks:
+      - alfagent
+
+  certbot:
+    image: certbot/certbot:v3.1.0
+    container_name: alfagent-prod-certbot
+    restart: unless-stopped
+    depends_on:
+      - nginx
+    environment:
+      DOMAIN: ${DOMAIN:-localhost}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL:-}
+      LETSENCRYPT_STAGING: ${LETSENCRYPT_STAGING:-0}
+    volumes:
+      - certbot_www:/var/www/certbot
+      - certbot_certs:/etc/letsencrypt
+      - ./docker/certbot/entrypoint.sh:/entrypoint.sh:ro
+    entrypoint: ["/bin/sh", "/entrypoint.sh"]
+    networks:
+      - alfagent
+
+volumes:
+  alfagent_prod_pgdata:
+  certbot_www:
+  certbot_certs:
+
+networks:
+  alfagent:
+    driver: bridge

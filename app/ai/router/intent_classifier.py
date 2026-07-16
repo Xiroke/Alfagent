@@ -5,7 +5,7 @@ import logging
 import re
 from dataclasses import dataclass
 
-from app.ai.clients.openrouter import OpenRouterClient
+from app.ai.clients.llm import LLMClient
 from app.ai.prompts.templates import INTENT_CLASSIFIER_SYSTEM
 from app.core.config import Settings, get_settings
 from app.domain.agents import AgentType
@@ -48,7 +48,7 @@ class IntentClassifier:
 
     def __init__(
         self,
-        client: OpenRouterClient,
+        client: LLMClient,
         settings: Settings | None = None,
     ) -> None:
         self._client = client
@@ -74,7 +74,7 @@ class IntentClassifier:
                     {"role": "system", "content": INTENT_CLASSIFIER_SYSTEM},
                     {"role": "user", "content": message},
                 ],
-                model=self._settings.openrouter_classifier_model,
+                model=self._settings.llm_classifier_model,
                 temperature=0.0,
                 max_tokens=256,
                 response_format={"type": "json_object"},

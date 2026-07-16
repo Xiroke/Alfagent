@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import { useForm, useFieldArray, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Plus, Trash, UploadSimple, User } from "@phosphor-icons/react"
@@ -18,6 +19,7 @@ export function FoundersStep() {
   const setFounders = useRegistrationWizardStore((s) => s.setFounders)
   const { goNext, goBack } = useWizardNavigation()
   const { total, remaining, isValid } = useOwnershipShares()
+  const fileInputRefs = useRef<Record<string, HTMLInputElement | null>>({})
 
   const {
     control,
@@ -202,9 +204,9 @@ export function FoundersStep() {
                 error={passportError}
                 hint="PDF или изображение, до 10 МБ"
               >
-                <label
+                <div
                   className={cn(
-                    "flex min-h-12 cursor-pointer items-center justify-between gap-3 rounded-xl border border-dashed border-border bg-canvas px-4 py-3.5 transition-colors hover:border-accent/40",
+                    "flex min-h-12 items-center justify-between gap-3 rounded-xl border border-dashed border-border bg-canvas px-4 py-3.5 transition-colors",
                     passportName && "border-solid border-accent/40 bg-accent-soft/50",
                   )}
                 >
@@ -214,28 +216,52 @@ export function FoundersStep() {
                       {passportName ?? "Загрузить файл"}
                     </span>
                   </div>
-                  <input
-                    type="file"
-                    accept="image/*,.pdf"
-                    className="sr-only"
-                    onChange={(e) => {
-                      const file = e.target.files?.[0]
-                      if (!file) return
-                      setValue(`founders.${index}.passportFileName`, file.name, {
-                        shouldValidate: true,
-                      })
-                      setValue(`founders.${index}.passportFileSize`, file.size, {
-                        shouldValidate: true,
-                      })
-                    }}
-                  />
-                  <span className="text-xs text-ink-muted">
-                    {watched?.[index]?.passportFileSize
-                      ? `${Math.round((watched[index]!.passportFileSize! / 1024) * 10) / 10} КБ`
-                      : "Выбрать"}
-                  </span>
-                </label>
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs text-ink-muted">
+                      {watched?.[index]?.passportFileSize
+                        ? `${Math.round((watched[index]!.passportFileSize! / 1024) * 10) / 10} КБ`
+                        : "Файл не выбран"}
+                    </span>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={() => fileInputRefs.current[field.id]?.click()}
+                    >
+                      Выбрать
+                    </Button>
+                  </div>
+                </div>
+                <input
+                  ref={(node) => {
+                    fileInputRefs.current[field.id] = node
+                  }}
+                  type="file"
+                  accept="image/*,.pdf"
+                  className="sr-only"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0]
+                    if (!file) return
+                    setValue(`founders.${index}.passportFileName`, file.name, {
+                      shouldValidate: true,
+                    })
+                    setValue(`founders.${index}.passportFileSize`, file.size, {
+                      shouldValidate: true,
+                    })
+                    // Allow re-selecting the same file on the next click.
+                    e.currentTarget.value = ""
+                  }}
+                />
+                {/* Ensure these fields are registered so RHF/watch updates immediately after setValue(). */}
                 <input type="hidden" {...register(`founders.${index}.id`)} />
+                <input
+                  type="hidden"
+                  {...register(`founders.${index}.passportFileName` as const)}
+                />
+                <input
+                  type="hidden"
+                  {...register(`founders.${index}.passportFileSize` as const, { valueAsNumber: true })}
+                />
               </FormField>
             </div>
           )

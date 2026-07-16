@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from sqlalchemy import text
 
-from app.api.deps import start_openrouter_client, stop_openrouter_client
+from app.api.deps import start_llm_client, stop_llm_client
 from app.api.v1.router import api_router
 from app.core.config import get_settings
 from app.core.exceptions import register_exception_handlers
@@ -19,10 +19,10 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     async with factory() as session:
         await session.execute(text("SELECT 1"))
 
-    openrouter = await start_openrouter_client()
-    app.state.openrouter = openrouter
+    llm = await start_llm_client()
+    app.state.llm = llm
     yield
-    await stop_openrouter_client()
+    await stop_llm_client()
     await dispose_db()
 
 

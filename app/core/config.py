@@ -31,23 +31,29 @@ class Settings(BaseSettings):
     secret_key: str = Field(..., min_length=16)
     access_token_expire_minutes: int = 60
 
-    # OpenRouter (OpenAI-compatible gateway)
-    openrouter_api_key: str = Field(default="", description="Bearer token for OpenRouter")
-    openrouter_base_url: str = "https://openrouter.ai/api/v1"
-    openrouter_chat_model: str = "openai/gpt-4o-mini"
-    openrouter_classifier_model: str = "openai/gpt-4o-mini"
-    openrouter_embedding_model: str = "openai/text-embedding-3-small"
-    openrouter_http_referer: str = "https://alfagent.local"
-    openrouter_app_title: str = "Alfagent"
-    openrouter_timeout_seconds: float = Field(default=60.0, ge=5.0)
-    openrouter_connect_timeout_seconds: float = Field(default=10.0, ge=1.0)
-    openrouter_max_retries: int = Field(default=3, ge=0, le=8)
-    openrouter_retry_backoff_seconds: float = Field(default=0.75, ge=0.1)
+    # Cloud.ru Foundation Models (OpenAI-compatible)
+    # Env: API_KEY (preferred) or LLM_API_KEY
+    api_key: str = Field(default="", description="Cloud.ru Foundation Models API key")
+    llm_base_url: str = "https://foundation-models.api.cloud.ru/v1"
+    llm_chat_model: str = "ai-sage/GigaChat3-10B-A1.8B"
+    llm_classifier_model: str = "ai-sage/GigaChat3-10B-A1.8B"
+    llm_embedding_model: str = "Qwen/Qwen3-Embedding-0.6B"
+    llm_timeout_seconds: float = Field(default=60.0, ge=5.0)
+    llm_connect_timeout_seconds: float = Field(default=10.0, ge=1.0)
+    llm_max_retries: int = Field(default=3, ge=0, le=8)
+    llm_retry_backoff_seconds: float = Field(default=0.75, ge=0.1)
+    llm_temperature: float = Field(default=0.5, ge=0.0, le=2.0)
+    llm_top_p: float = Field(default=0.95, ge=0.0, le=1.0)
+    llm_presence_penalty: float = Field(default=0.0, ge=-2.0, le=2.0)
+    llm_max_tokens: int = Field(default=2500, ge=1, le=16_000)
 
-    # RAG
+    # RAG — Qwen3-Embedding-0.6B outputs 1024 dims
     rag_top_k: int = Field(default=5, ge=1, le=20)
     rag_similarity_threshold: float = Field(default=0.35, ge=0.0, le=1.0)
-    embedding_dimensions: int = Field(default=1536, ge=256, le=3072)
+    embedding_dimensions: int = Field(default=1024, ge=256, le=3072)
+
+    # Document upload for wizard prefill
+    max_upload_bytes: int = Field(default=10 * 1024 * 1024, ge=1024, le=50 * 1024 * 1024)
 
     @field_validator("database_url", mode="before")
     @classmethod
@@ -61,8 +67,8 @@ class Settings(BaseSettings):
         return self.app_env.lower() == "production"
 
     @property
-    def openrouter_configured(self) -> bool:
-        return bool(self.openrouter_api_key.strip())
+    def llm_configured(self) -> bool:
+        return bool(self.api_key.strip())
 
 
 @lru_cache

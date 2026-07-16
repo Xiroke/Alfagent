@@ -1,0 +1,1306 @@
+{
+  "widget_count": 2463,
+  "interesting": [
+    {
+      "path": "[2]",
+      "name": "DraftNotification",
+      "uid": "f4996754-4fcb-404f-bd3e-ef7aea68765e",
+      "texts": [
+        "у вас есть несколько неоформленных заявок",
+        "Ваша заявка ждёт",
+        "Уведомление о брошенном черновике",
+        "Модальное окно",
+        "Уведомление о брошенном черновике-Стикибар",
+        "Закрыть",
+        "Уведомление о брошенном черновике-Модальное окно",
+        "Закрыть"
+      ],
+      "images": [
+        "https://alfabank.servicecdn.ru/site-upload/24/6e/1449/Desktop_Teaser_cc_drft_ntfn.png",
+        "https://alfabank.servicecdn.ru/site-upload/a9/98/1449/Desktop_Teaser_mir_supreme_drft_ntfn.png",
+        "https://alfabank.servicecdn.ru/site-upload/38/b3/9605/cc-beeline-desk.png",
+        "https://alfabank.servicecdn.ru/site-upload/24/6e/1449/Desktop_Teaser_cc_drft_ntfn.png",
+        "https://alfabank.servicecdn.ru/site-upload/24/6e/1449/Desktop_Teaser_cc_drft_ntfn.png",
+        "https://alfabank.servicecdn.ru/site-upload/83/3f/5227/D_Drafts_292x158_030223323.png"
+      ]
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3",
+      "uid": "019658ce-27cd-7aa1-9add-75aaf2cde97f",
+      "texts": [
+        "Что вы хотите найти?",
+        "Среднему и крупному бизнесу",
+        "Меню Корпорации",
+        "Desk_меню_корпорации",
+        "Меню Корпорации",
+        "Desk_меню_корпорации",
+        "Малому бизнесу и ИП",
+        "Меню ММБ и ИП"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c08f3-eb0c-788f-89ba-1e55eecbc038",
+      "texts": [
+        "Меню_Частным_лицам",
+        "Desk_меню_частным лицам_ещё",
+        "Desk_меню_частным лицам_А-Клуб",
+        "Desk_меню_частным лицам_Альфа-Будущее",
+        "Desk_меню_частным лицам_Семья и дети",
+        "Desk_меню_частным лицам_самозанятость",
+        "Desk_меню_частным лицам_Мобильная Связь",
+        "Desk_меню_частным лицам_премиум"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Tabs",
+      "uid": "019658e8-7778-7aa1-9ae9-90262417ad6c",
+      "texts": [
+        "Ещё",
+        "А-Клуб",
+        "Альфа‑Будущее",
+        "Иностранцы",
+        "Семья и дети",
+        "Самозанятость",
+        "Мобильная связь",
+        "Альфа-Смарт"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a15-7be5-700a-9434-e06cf95f4de2",
+      "texts": [
+        "Меню разделов",
+        "Карта Апельсин",
+        "Детская карта 🧸",
+        "Карта Alfa Only",
+        "Мяу-Карта",
+        "Платёжные Альфа‑Стикеры 🔥",
+        "Альфа‑Карта с гравировкой 🔥",
+        "Альфа‑Карта"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7778-7aa1-9ae9-ab03d8dbe26a",
+      "texts": [
+        "Дебетовые карты",
+        "Карта Апельсин",
+        "Детская карта 🧸",
+        "Карта Alfa Only",
+        "Мяу-Карта",
+        "Платёжные Альфа‑Стикеры 🔥",
+        "Альфа‑Карта с гравировкой 🔥",
+        "Альфа‑Карта"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a14-fca0-700a-9425-c4cd436aa8e3",
+      "texts": [
+        "Меню разделов",
+        "Полезные статьи",
+        "Кредитная карта 100 дней"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019ce6f7-05f3-7dd8-ade6-3ad20cda0229",
+      "texts": [
+        "Кредитные карты",
+        "Полезные статьи",
+        "Кредитная карта 100 дней"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[2]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a19-0cf2-700a-9434-fcafc2df87a9",
+      "texts": [
+        "Меню разделов",
+        "15 привилегий Альфа-Смарт",
+        "Зарплата каждый день",
+        "Альфа-Карта с Запасным кошельком 🔥",
+        "Альфа‑Карта для зарплаты"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[2]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9ae9-bc886f23d26c",
+      "texts": [
+        "Специальные условия",
+        "15 привилегий Альфа-Смарт",
+        "Зарплата каждый день",
+        "Альфа-Карта с Запасным кошельком 🔥",
+        "Альфа‑Карта для зарплаты"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a1b-3789-700a-9444-dc77d076384d",
+      "texts": [
+        "Меню разделов",
+        "Социальный вклад",
+        "Альфа‑Вклад Капитал",
+        "Альфа-Вклад Пенсионный",
+        "Альфа‑Вклад",
+        "Альфа‑Вклад для новых денег",
+        "Альфа-Вклад Ключевой",
+        "Альфа‑Вклад 20% 🔥"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9ae9-d3d1780f0c7f",
+      "texts": [
+        "Вклады",
+        "Социальный вклад",
+        "Альфа‑Вклад Капитал",
+        "Альфа‑Вклад Пенсионный",
+        "Альфа‑Вклад",
+        "Альфа‑Вклад для новых денег",
+        "Альфа‑Вклад Ключевой",
+        "Альфа‑Вклад 20% 🔥"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a1d-a67d-700a-9455-99412fd60f3a",
+      "texts": [
+        "Меню разделов",
+        "Социальный счёт",
+        "Альфа-Счёт",
+        "🔥 Стань миллионером"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9ae9-dd31f4aaa8e1",
+      "texts": [
+        "Накопительные счета",
+        "Социальный счёт",
+        "Альфа‑Счёт",
+        "🔥 Стань миллионером"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[2]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a1e-7560-700a-9456-14dc79a86b13",
+      "texts": [
+        "Меню разделов",
+        "Альфа‑Вклад с инвестициями",
+        "Детская копилка",
+        "Драгоценные металлы",
+        "Накопительный спринт",
+        "Копилка для зарплаты"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[2]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9ae9-e4f033c30604",
+      "texts": [
+        "Сервисы для накоплений",
+        "Альфа‑Вклад с инвестициями",
+        "Детская копилка",
+        "Драгоценные металлы",
+        "Накопительный спринт",
+        "Копилка для зарплаты"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[2]/NamedContainer[0]/Grid[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a20-ba60-700a-9466-4ed6b0350100",
+      "texts": [
+        "Меню разделов",
+        "Кредитные карты",
+        "Рефинансирование кредита",
+        "Кредит под залог на любые цели",
+        "Кредит на автомобиль",
+        "Деньги до зарплаты",
+        "Кредит наличными"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[2]/NamedContainer[0]/Grid[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9ae9-fe5611a38fc6",
+      "texts": [
+        "Все кредиты",
+        "Кредитные карты",
+        "Рефинансирование кредита",
+        "Кредит под залог на любые цели",
+        "Кредит на автомобиль",
+        "Деньги до зарплаты",
+        "Кредит наличными"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[2]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a22-a26b-700a-9477-82d463b41652",
+      "texts": [
+        "Меню разделов",
+        "Как получить отсрочку по кредитам",
+        "Полезные статьи",
+        "Работа со справками",
+        "Погашение кредита",
+        "Кредитный калькулятор"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[2]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aea-06ea934b32e2",
+      "texts": [
+        "Полезное",
+        "Как получить отсрочку по кредитам",
+        "Полезные статьи",
+        "Работа со справками",
+        "Погашение кредита",
+        "Кредитный калькулятор"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[3]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a26-eebd-700a-9496-e814ca7658b8",
+      "texts": [
+        "Меню разделов",
+        "Сервисы для риелторов",
+        "Защита сделок с недвижимостью",
+        "Оформление сделок с недвижимостью"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[3]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aea-228161f0bc9c",
+      "texts": [
+        "Сделка за свои средства",
+        "Сервисы для риелторов",
+        "Защита сделок с недвижимостью",
+        "Оформление сделок с недвижимостью"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[0]/Container[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a2a-2004-733a-b6dd-a8c8cc68a6f7",
+      "texts": [
+        "Меню разделов",
+        "Альфа-Турнир",
+        "Альфа‑Трейдинг 🔥",
+        "Альфа‑Форекс",
+        "Тарифы",
+        "Драгоценные металлы",
+        "Обмен валюты на бирже",
+        "ИИС"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[0]/Container[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aea-4c80b2415035",
+      "texts": [
+        "Альфа‑Инвестиции",
+        "Альфа-Турнир",
+        "Альфа‑Трейдинг 🔥",
+        "Альфа‑Форекс",
+        "Тарифы",
+        "Драгоценные металлы",
+        "Обмен валюты на бирже",
+        "ИИС"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[2]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a2d-ed7d-733a-b6ee-6660ad2d612d",
+      "texts": [
+        "Меню разделов",
+        "Поддержка",
+        "Обучение",
+        "Новости и аналитика",
+        "PRO-терминал Альфа‑Инвестиции",
+        "Веб-терминал Альфа‑Инвестиции",
+        "Альфа‑Инвестиции Онлайн",
+        "Мобильное приложение для инвестиций 🔥"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[2]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aea-775a2173d999",
+      "texts": [
+        "Сервисы для инвестиций",
+        "Поддержка",
+        "Обучение",
+        "Новости и аналитика",
+        "PRO-терминал Альфа‑Инвестиции",
+        "Веб-терминал Альфа‑Инвестиции",
+        "Альфа‑Инвестиции Онлайн",
+        "Мобильное приложение для инвестиций 🔥"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[5]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a30-76fa-733a-b6fe-8cddc4ce5c31",
+      "texts": [
+        "Меню разделов",
+        "Накопительный счёт",
+        "Мобильная связь",
+        "Альфа-Карта"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[5]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aea-93f546cda753",
+      "texts": [
+        "Продуктовые преимущества",
+        "Накопительный счёт",
+        "Мобильная связь",
+        "Альфа-Карта"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[6]/NamedContainer[0]/Grid[0]/Container[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a31-5e48-733a-b70e-6d40969f730a",
+      "texts": [
+        "Меню разделов",
+        "Полезно знать",
+        "Зарплатная карта Alfa Only",
+        "Тонкий стикер Alfa Only Жемчужина",
+        "Тонкий стикер Alfa Only",
+        "Платёжное кольцо",
+        "Карта Alfa Only Aeroflot",
+        "Карта Alfa Only Travel"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[6]/NamedContainer[0]/Grid[0]/Container[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aea-b25a463bc786",
+      "texts": [
+        "Премиальный сервис Alfa Only",
+        "Полезно знать",
+        "Зарплатная карта Alfa Only",
+        "Тонкий стикер Alfa Only Жемчужина",
+        "Тонкий стикер Alfa Only",
+        "Платёжное кольцо",
+        "Карта Alfa Only Aeroflot",
+        "Карта Alfa Only Travel"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[6]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a33-dfd9-733a-b71e-a7bc9594ab13",
+      "texts": [
+        "Меню разделов",
+        "Персональный менеджер",
+        "Консьерж-сервис",
+        "Привилегии в ресторанах",
+        "Премиальный вклад",
+        "Партнёрская программа ЦУМ",
+        "Металлическая карта",
+        "Подробнее о премиальном сервисе"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[6]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aea-bbb6eb6435a9",
+      "texts": [
+        "Преимущества",
+        "Персональный менеджер",
+        "Консьерж-сервис",
+        "Привилегии в ресторанах",
+        "Премиальный вклад",
+        "Партнёрская программа ЦУМ",
+        "Металлическая карта",
+        "Подробнее о премиальном сервисе"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[7]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a37-2fba-733a-b72f-58e99f74cbc5",
+      "texts": [
+        "Меню разделов",
+        "Полезные статьи",
+        "Карта покрытия",
+        "Вопрос-ответ",
+        "Документы",
+        "Новости"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[7]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aea-df5919372d12",
+      "texts": [
+        "Полезное",
+        "Полезные статьи",
+        "Карта покрытия",
+        "Вопрос-ответ",
+        "Документы",
+        "Новости"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[8]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a3a-04e5-733a-b73f-f957444350b2",
+      "texts": [
+        "Меню разделов",
+        "СRM-система",
+        "Реклама для самозанятых",
+        "Приложение для самозанятых",
+        "Кредитные продукты"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[8]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aeb-02f31d725b3e",
+      "texts": [
+        "Продукты и сервисы",
+        "СRM-система",
+        "Реклама для самозанятых",
+        "Приложение для самозанятых",
+        "Кредитные продукты"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[9]/NamedContainer[0]/Grid[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a3c-ff8a-733a-b750-02215cb2cde4",
+      "texts": [
+        "Меню разделов",
+        "Близкие",
+        "Детская Копилка",
+        "Детские пособия",
+        "Совместный счёт",
+        "Детский стикер",
+        "Приложение для детей",
+        "Детская карта (6-14 лет) 🧸"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[9]/NamedContainer[0]/Grid[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019782df-225a-711f-b452-ce903c8a9bd0",
+      "texts": [
+        "Семья и дети",
+        "Близкие",
+        "Совместный счёт",
+        "Детские пособия",
+        "Детская Копилка",
+        "Детский стикер",
+        "Приложение для детей",
+        "Детская карта (6-14 лет) 🧸"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[9]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a3e-080d-733a-b750-552a24d5b00d",
+      "texts": [
+        "Меню разделов",
+        "Карта для молодёжи (с 14 лет)"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[9]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019782df-225a-711f-b452-d24568cd1842",
+      "texts": [
+        "Молодёжь",
+        "Карта для молодёжи (с 14 лет)"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[9]/NamedContainer[0]/Grid[2]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a3e-c0d3-733a-b750-a49cd94db65d",
+      "texts": [
+        "Меню разделов",
+        "Карта для пенсионеров",
+        "Перевод пенсии",
+        "Продукты для пенсионеров"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[9]/NamedContainer[0]/Grid[2]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019782df-225a-711f-b452-df1c3d67feba",
+      "texts": [
+        "Пенсионеры",
+        "Карта для пенсионеров",
+        "Перевод пенсии",
+        "Продукты для пенсионеров"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[10]/NamedContainer[0]/Grid[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019e072b-d8ee-7223-a800-a56fb4efdf47",
+      "texts": [
+        "Меню разделов",
+        "Карта для иностранцев"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[10]/NamedContainer[0]/Grid[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019e072b-d8ee-7223-a800-ac33eb51b999",
+      "texts": [
+        "Карты",
+        "Карта для иностранцев"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[10]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019e072b-d8ee-7223-a800-ba3d58484c65",
+      "texts": [
+        "Сервисы\r\n",
+        "Международные переводы"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[11]/NamedContainer[0]/Grid[2]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a42-ddf0-733a-b761-38158b50ef35",
+      "texts": [
+        "Меню разделов",
+        "Курс по Тестированию для QA‑инженеров",
+        "Курс по Системной аналитике",
+        "Курс по Бизнес-аналитике",
+        "Курс по Android-разработке",
+        "Магистратуры 🔥"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[11]/NamedContainer[0]/Grid[2]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aeb-2de9cc1dbf4c",
+      "texts": [
+        "Образование",
+        "Курс по Тестированию для QA‑инженеров",
+        "Курс по Системной аналитике",
+        "Курс по Бизнес-аналитике",
+        "Курс по Android-разработке",
+        "Магистратуры 🔥"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[13]/NamedContainer[0]/Grid[0]/Container[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a48-9f4f-733a-b7a1-578375f6dbd0",
+      "texts": [
+        "Меню разделов",
+        "Работа в Альфа-Банке",
+        "Обращение по 123-ФЗ",
+        "Тарифы и документы",
+        "Отзывы клиентов",
+        "Справочный центр",
+        "О банке"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[13]/NamedContainer[0]/Grid[0]/Container[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aeb-6d3713de42f2",
+      "texts": [
+        "Информация",
+        "Работа в Альфа-Банке",
+        "Обращение по 123-ФЗ",
+        "Тарифы и документы",
+        "Отзывы клиентов",
+        "Справочный центр",
+        "О банке"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[13]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a49-4d2c-733a-b7a1-8ae59f4bb4f6",
+      "texts": [
+        "Меню разделов",
+        "Социальные выплаты",
+        "Пополнение банковских карт",
+        "Страхование",
+        "15 привилегий Альфа‑Смарт",
+        "Аренда сейфовых ячеек",
+        "Онлайн-сервисы",
+        "Скачать приложение ⭐️"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[13]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aeb-8ecd051b98ee",
+      "texts": [
+        "Сервисы",
+        "Социальные выплаты",
+        "Пополнение банковских карт",
+        "Страхование",
+        "15 привилегий Альфа‑Смарт",
+        "Аренда сейфовых ячеек",
+        "Онлайн-сервисы",
+        "Скачать приложение ⭐️"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[13]/NamedContainer[0]/Grid[2]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a49-2a2d-733a-b7a1-8494e2f1f2a5",
+      "texts": [
+        "Меню разделов",
+        "Исследовательский центр Альфа‑Банка",
+        "Партнёрская программа Alfapartners",
+        "Пилотирование стартапов",
+        "Свой в Альфе",
+        "Подели"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[0]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[13]/NamedContainer[0]/Grid[2]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658e8-7779-7aa1-9aeb-946f2b24637b",
+      "texts": [
+        "Проекты",
+        "Исследовательский центр Альфа‑Банка",
+        "Партнёрская программа Alfapartners",
+        "Пилотирование стартапов",
+        "Свой в Альфе",
+        "Подели"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a55-0b18-7ff3-8f94-8a2582d1ebf8",
+      "texts": [
+        "Меню_Частным_лицам",
+        "Desk_меню_малому бизнесу_Ещё",
+        "Desk_меню_малому бизнесу_Партнёрская программа",
+        "Desk_меню_малому бизнесу_Лояльность",
+        "Desk_меню_малому бизнесу_Сервисы для бизнеса",
+        "Desk_меню_малому бизнесу_Карты",
+        "Desk_меню_малому бизнесу_Накопления",
+        "Desk_меню_малому бизнесу_Отраслевые решения"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Tabs",
+      "uid": "019658ee-4b02-7eeb-852f-04b2f4afc566",
+      "texts": [
+        "Ещё",
+        "Партнёрская программа",
+        "Лояльность",
+        "Сервисы для бизнеса",
+        "Карты",
+        "Накопления",
+        "Отраслевые решения",
+        "Эквайринг"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[0]/Container[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a5a-a8ba-7ff3-8fa4-521ba561f8a4",
+      "texts": [
+        "Меню разделов",
+        "Спецсчета",
+        "Документы для открытия счёта",
+        "Подобрать тариф РКО",
+        "Тарифы РКО",
+        "Открыть счёт"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[0]/Container[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b02-7eeb-852f-612dadcc784e",
+      "texts": [
+        "Расчётный счёт",
+        "Спецсчета",
+        "Документы для открытия счёта",
+        "Подобрать тариф РКО",
+        "Тарифы РКО",
+        "Открыть счёт"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[0]/Container[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019658ee-4b02-7eeb-852f-6adefaddea63",
+      "texts": [
+        "Расчётный счёт",
+        "Открыть счёт"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[0]/NamedContainer[0]/Grid[0]/Container[1]/AnalyticsEventSender[0]/ButtonV2[0]",
+      "name": "TextHolder",
+      "uid": "019658ee-4b02-7eeb-852f-7ec7c3750bc3",
+      "texts": [
+        "Открыть счёт"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[0]/Container[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a5d-c2b0-7ff3-8fb4-b3520ca65ebf",
+      "texts": [
+        "Меню разделов",
+        "Самозанятые ИП",
+        "Самозанятые",
+        "Решение для старта бизнеса",
+        "Онлайн регистрация ООО",
+        "Онлайн регистрация ИП"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[0]/Container[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b02-7eeb-852f-23b0995e3a5c",
+      "texts": [
+        "Начало бизнеса",
+        "Самозанятые ИП",
+        "Самозанятые",
+        "Решение для старта бизнеса",
+        "Онлайн регистрация ООО",
+        "Онлайн регистрация ИП"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[0]/Container[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019658ee-4b02-7eeb-852f-2f212780e124",
+      "texts": [
+        "Начало бизнеса",
+        "Зарегистрировать бизнес"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[0]/Container[1]/AnalyticsEventSender[0]/ButtonV2[0]",
+      "name": "TextHolder",
+      "uid": "019658ee-4b02-7eeb-852f-3e25a770b369",
+      "texts": [
+        "Зарегистрировать бизнес"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a5e-fd21-7ff3-8fc4-7bb78d2761bf",
+      "texts": [
+        "Меню разделов",
+        "Все статьи",
+        "Документы для открытия ООО",
+        "Открытие ООО самостоятельно",
+        "Документы для регистрации ИП",
+        "Что выбрать: ИП или ООО?"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[1]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b02-7eeb-852f-42b05e05d40f",
+      "texts": [
+        "Может быть интересно",
+        "Все статьи",
+        "Документы для открытия ООО",
+        "Открытие ООО самостоятельно",
+        "Документы для регистрации ИП",
+        "Что выбрать: ИП или ООО?"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[2]/NamedContainer[0]/Grid[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b02-7eeb-852f-a1084f61654c",
+      "texts": [
+        "Для онлайн бизнеса",
+        "Онлайн-продажи",
+        "Маркетплейсы"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[2]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b03-7eeb-852f-aea383390c46",
+      "texts": [
+        "Для офлайн бизнеса",
+        "Недвижимость",
+        "Нотариусы",
+        "Такси",
+        "Розничная торговля",
+        "Оптовая торговля",
+        "Бьюти и фитнес",
+        "Агентство путешествий"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[3]/NamedContainer[0]/Grid[0]/Container[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a69-7932-7ff3-9007-9de3e53dbc9a",
+      "texts": [
+        "Меню разделов",
+        "Терминалы под ваши потребности 🔥",
+        "База знаний торгового эквайринга",
+        "Приложения AlfaPOS и AlfaCASH",
+        "Легкий эквайринг mPOS",
+        "Альфа‑касса",
+        "Торговый эквайринг"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[3]/NamedContainer[0]/Grid[0]/Container[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b03-7eeb-852f-cadc8b137274",
+      "texts": [
+        "Приём платежей в торговых точках",
+        "Терминалы под ваши потребности 🔥",
+        "База знаний торгового эквайринга",
+        "Приложения AlfaPOS и AlfaCASH",
+        "Легкий эквайринг mPOS",
+        "Альфа‑касса",
+        "Торговый эквайринг"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[0]/Container[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a62-d202-7ff3-8fd6-2816a89fa4b0",
+      "texts": [
+        "Меню разделов",
+        "Кредит для селлеров",
+        "Универсальный кредитный лимит",
+        "Альфа‑Старт",
+        "Рефинансирование кредитов",
+        "Кредит «Деньги на дело»",
+        "Бизнес-Ипотека",
+        "Кредитная карта Business One Credit"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[0]/Container[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b03-7eeb-852f-f41a07c619fd",
+      "texts": [
+        "Кредитные предложения",
+        "Кредит для селлеров",
+        "Универсальный кредитный лимит",
+        "Альфа‑Старт",
+        "Рефинансирование кредитов",
+        "Кредит «Деньги на дело»",
+        "Бизнес-Ипотека",
+        "Кредитная карта Business One Credit"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[0]/Container[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019658ee-4b03-7eeb-852f-fc0b01400a55",
+      "texts": [
+        "Кредитные предложения",
+        "Оформить кредит"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[0]/Container[1]/AnalyticsEventSender[0]/ButtonV2[0]",
+      "name": "TextHolder",
+      "uid": "019658ee-4b03-7eeb-8530-0ad7aecbd106",
+      "texts": [
+        "Оформить кредит"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a65-0c5d-7ff3-8fe6-95ea19179630",
+      "texts": [
+        "Меню разделов",
+        "Факторинг",
+        "Лизинг 🔥",
+        "Банковская гарантия",
+        "Кредит на покупки для бизнеса"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[1]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b03-7eeb-8530-17f7f455a665",
+      "texts": [
+        "Другие формы финансирования",
+        "Факторинг",
+        "Лизинг 🔥",
+        "Банковская гарантия",
+        "Кредит на покупки для бизнеса"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[2]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a66-6f37-7ff3-8ff6-8809807b77cc",
+      "texts": [
+        "Меню разделов",
+        "Защита бизнеса",
+        "Подписки на кредитные продукты",
+        "Кредитные каникулы",
+        "Рассчитать кредит",
+        "Ваши заявки на кредит"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[4]/NamedContainer[0]/Grid[2]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b03-7eeb-8530-181434361f1f",
+      "texts": [
+        "Сервисы",
+        "Защита бизнеса",
+        "Подписки на кредитные продукты",
+        "Кредитные каникулы",
+        "Рассчитать кредит",
+        "Ваши заявки на кредит"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[5]/NamedContainer[0]/Grid[0]/Container[0]",
+      "name": "AnalyticsEventSender",
+      "uid": "019c0a70-ab67-7ff3-9038-4a2f0b2dc614",
+      "texts": [
+        "Меню разделов",
+        "Фиксированный остаток",
+        "Бивалютный депозит",
+        "Овернайт",
+        "Депозиты для бизнеса 🔥"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[5]/NamedContainer[0]/Grid[0]/Container[0]/AnalyticsEventSender[0]",
+      "name": "MainHeaderV3.Links",
+      "uid": "019658ee-4b03-7eeb-8530-387c3f27cdaf",
+      "texts": [
+        "Размещение на срок",
+        "Фиксированный остаток",
+        "Бивалютный депозит",
+        "Овернайт",
+        "Депозиты для бизнеса 🔥"
+      ],
+      "images": []
+    },
+    {
+      "path": "[3]/Container[0]/BackgroundV2[0]/Container[0]/Container[0]/Container[0]/Container[0]/PublisherV2[0]/AnalyticsEventSender[0]/MainHeaderV3[1]/NamedContainer[0]/AnalyticsEventSender[0]/MainHeaderV3.Tabs[5]/NamedContainer[0]/Grid[0]/Container[1]",
+      "name": "AnalyticsEventSender",
+      "uid": "0197a7a8-7996-7775-b9ff-ad2d77d5a7bf",
+      "texts": [
+        "Расчётный счёт",
+        "Открыть счёт"
+      ],
+      "images": []
+    }
+  ],
+  "cards_html": [
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/09/a6/1449/Desk_Bento_Primary-vklad-15072026.png",
+      "title": "Альфа‑Вклад",
+      "subtitle": "Успейте получить 20% годовых — только до 31 августа"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/d7/ba/1449/D_MainBento_412x128_020925.png",
+      "title": "Кредит наличными",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/58/82/1449/D_MainBento_dk_412x128_040425.png",
+      "title": "Бесплатная Альфа‑Карта",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/02/ed/1449/D_MainBento_267x273_230524.png",
+      "title": "Кредитная карта",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/0e/cc/1449/D_MainBento_267x273_01_10072026-invest.jpg",
+      "title": "Гарантируем доход",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/25/51/1449/D_CardPromo_267_298_vertical_dc.png",
+      "title": "Дебетовые карты",
+      "subtitle": "Суперкэшбэк до 100%"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/91/be/1449/D_CardPromo_267x298_230524.png",
+      "title": "Кредитные карты",
+      "subtitle": "Обслуживание 0 ₽"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/b3/74/2330/CardPromo_267x298_121123-4.png",
+      "title": "Кредиты",
+      "subtitle": "Оформление онлайн"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/e3/cf/2330/CardPromo_267x298_121123-2.png",
+      "title": "Накопления",
+      "subtitle": "Доход с первого месяца"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/20/9a/1449/D_CardPromo_267x298-15122025.png",
+      "title": "Инвестиции",
+      "subtitle": "Гарантируем 30% годовых"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/90/85/2330/CardPromo_267x298_121123-3.png",
+      "title": "Ипотека",
+      "subtitle": "Одобрим за 60 секунд"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/c9/0c/1449/D_CardPromo_267x298_071024.png",
+      "title": "Alfa Only",
+      "subtitle": "Ваш премиальный сервис"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/0d/ce/1449/D_CardPromo_267x298_120924.png",
+      "title": "Для детей и семьи",
+      "subtitle": "Карты с кэшбэком"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/07/a9/7110/D_CardPromo_267x298_221223-8.jpg",
+      "title": "Регистрация бизнеса",
+      "subtitle": "Онлайн за 0 ₽"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/f4/4d/7110/D_CardPromo_267x298_221223-1.jpg",
+      "title": "Счёт для бизнеса",
+      "subtitle": "Бесплатно"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/97/89/1449/D_CardPromo_267x298_3_18042025.png",
+      "title": "Кредиты",
+      "subtitle": "На развитие бизнеса"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/68/28/7110/D_CardPromo_267x298_221223-10.jpg",
+      "title": "Эквайринг",
+      "subtitle": "Комиссия от 1%"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/0c/91/1449/D_CardPromo_267x298_5_18042025.png",
+      "title": "Карты",
+      "subtitle": "С кэшбэком до 10%"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/ce/a3/60/D_CardPromo_267x298_dep.png",
+      "title": "Депозиты",
+      "subtitle": "Онлайн от 1 дня"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/6b/a8/7110/D_CardPromo_267x298_221223-6.jpg",
+      "title": "Отраслевые решения",
+      "subtitle": "Для любого бизнеса"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/ae/91/7110/D_CardPromo_267x298_221223-7.jpg",
+      "title": "Всё для малого бизнеса",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/07/a9/7110/D_CardPromo_267x298_221223-8.jpg",
+      "title": "Расчётный счёт",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/b8/47/7110/D_CardPromo_267x298_221223-9.jpg",
+      "title": "Кредиты",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/68/28/7110/D_CardPromo_267x298_221223-10.jpg",
+      "title": "Эквайринг",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/ca/fa/7110/D_CardPromo_267x298_221223-11.jpg",
+      "title": "Факторинг",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/00/16/7110/D_CardPromo_267x298_221223-12.jpg",
+      "title": "Зарплатный проект",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/12/05/7110/D_CardPromo_267x298_221223-13.jpg",
+      "title": "ВЭД",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/1e/ff/7110/D_CardPromo_267x298_221223-14.jpg",
+      "title": "Инвестбанк",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/4b/c2/7110/D_CardPromo_267x298_221223-15.jpg",
+      "title": "Всё для крупного бизнеса",
+      "subtitle": ""
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/02/4f/1449/D_CardPromo_364x364_030326.png",
+      "title": "Зарабатывайте играючи",
+      "subtitle": "Получайте деньги, умножайте кэшбэк, забирайте айфоны и другие гаджеты в играх Альфа‑Банка"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-presets/fe/f3/529/D_CardPromo_328x195_DFBFFF-big.png",
+      "title": "Платим до 7000 ₽ за рекомендации",
+      "subtitle": "Приглашайте друзей в Альфа-Банк и зарабатывайте"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/dc/75/1449/D_CardPromo_364x364_260724.png",
+      "title": "Высокие ставки по Альфа‑Вкладу",
+      "subtitle": "Растим ваши накопления в рублях и в юанях"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/ce/3d/1449/D_CardPromo_364-364_25112025.png",
+      "title": "Альфа‑Карта с гравировкой",
+      "subtitle": "Закажите карту из лимитированной серии с кастомным дизайном"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/8a/9a/1449/D_CardPromo_364x364_190525.png",
+      "title": "+1 категория кэшбэка",
+      "subtitle": "Получайте больше выгоды и привилегий с Альфа‑Смарт"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/13/5c/1449/D_PureCard_364x364_150125.png",
+      "title": "Безопасные расчёты за 0 ₽",
+      "subtitle": "Поддержим любые ваши сделки с недвижимостью"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/d7/48/1449/D_CardPromo_364x364_2-13022026.png",
+      "title": "Премиальный сервис Alfa Only",
+      "subtitle": "Путешествия с привилегиями и кэшбэк 10% в лучших ресторанах"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/4f/19/1449/D_CardPromo_364x364_170924_2.png",
+      "title": "Кредит наличными",
+      "subtitle": "Получите решение онлайн за 2 минуты"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/e9/51/1449/D_CardPromo_364x364_100725.png",
+      "title": "Бесплатная кредитная карта",
+      "subtitle": "Одобрим за минуту"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/7d/91/1449/D_CardPromo_364-364_210126.png",
+      "title": "Зарплата на Альфа‑Карту",
+      "subtitle": "Пользуйтесь выгодой: особая категория кэшбэка каждый месяц и обслуживание за 0 ₽"
+    },
+    {
+      "img": "https://alfabank.servicecdn.ru/site-upload/bd/ad/1449/D_Videoblock_528x528_251224.jpg",
+      "title": "Курсы валют",
+      "subtitle": ""
+    }
+  ]
+}

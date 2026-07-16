@@ -1,10 +1,5 @@
 """
-Multi-agent AI module (OpenRouter + RAG).
+Multi-agent AI module (Cloud.ru Foundation Models + RAG).
 
-Orchestration choice: raw HTTPX (see app.ai.clients.openrouter).
-LangChain is intentionally not used — keep the stack thin and streaming-first.
+Orchestration choice: raw HTTPX (see app.ai.clients.llm).
 """
-
-from app.ai.orchestrator import ChatStreamEvent, MultiAgentOrchestrator
-
-__all__ = ["ChatStreamEvent", "MultiAgentOrchestrator"]

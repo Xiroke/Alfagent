@@ -7,10 +7,10 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, WebSocket, WebSocketDisconnect, status
 from fastapi.responses import StreamingResponse
 
-from app.ai.clients.openrouter import OpenRouterClient
-from app.ai.orchestrator import MultiAgentOrchestrator
+from app.ai.clients.llm import LLMClient
+from app.ai.orchestrator import ChatStreamEvent, MultiAgentOrchestrator
 from app.ai.rag.embeddings import EmbeddingService
-from app.api.deps import SessionDep, get_openrouter_client, get_openrouter_singleton
+from app.api.deps import SessionDep, get_llm_client, get_llm_singleton
 from app.core.exceptions import LLMConfigError
 from app.infrastructure.database.session import get_session_factory
 from app.schemas.chat import (
@@ -28,10 +28,10 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/ai", tags=["ai-chat"])
 
-OpenRouterDep = Annotated[OpenRouterClient, Depends(get_openrouter_client)]
+LLMDep = Annotated[LLMClient, Depends(get_llm_client)]
 
 
-def get_orchestrator(session: SessionDep, client: OpenRouterDep) -> MultiAgentOrchestrator:
+def get_orchestrator(session: SessionDep, client: LLMDep) -> MultiAgentOrchestrator:
     return MultiAgentOrchestrator(session, client)
 
 
@@ -41,7 +41,7 @@ OrchestratorDep = Annotated[MultiAgentOrchestrator, Depends(get_orchestrator)]
 @router.post("/chat/stream", summary="SSE stream: router → RAG → agent reply")
 async def chat_stream_sse(
     payload: ChatRequest,
-    client: OpenRouterDep,
+    client: LLMDep,
 ) -> StreamingResponse:
     """
     Server-Sent Events stream for frontend chat.
@@ -62,12 +62,17 @@ async def chat_stream_sse(
                 forced_agent=payload.forced_agent,
                 company_id=payload.company_id,
                 company_profile=payload.company_profile,
+                history=[m.model_dump() for m in payload.history],
             ):
                 yield event.to_sse()
             await session.commit()
-        except Exception:
+        except Exception as exc:
             await session.rollback()
-            raise
+            logger.exception("chat/stream failed after partial SSE")
+            yield ChatStreamEvent(
+                event="error",
+                data={"message": str(exc), "code": getattr(exc, "code", "stream_error")},
+            ).to_sse()
         finally:
             await session.close()
 
@@ -87,7 +92,7 @@ async def chat_stream_ws(websocket: WebSocket) -> None:
     """WebSocket alternative for bi-directional chat control."""
     await websocket.accept()
     factory = get_session_factory()
-    client = get_openrouter_singleton()
+    client = get_llm_singleton()
     await client.start()
 
     try:
@@ -109,6 +114,7 @@ async def chat_stream_ws(websocket: WebSocket) -> None:
                         forced_agent=payload.forced_agent,
                         company_id=payload.company_id,
                         company_profile=payload.company_profile,
+                        history=[m.model_dump() for m in payload.history],
                     ):
                         await websocket.send_json({"event": event.event, **event.data})
                     await session.commit()
@@ -156,7 +162,7 @@ async def classify_intent(
 async def ingest_knowledge(
     payload: KnowledgeIngestRequest,
     session: SessionDep,
-    client: OpenRouterDep,
+    client: LLMDep,
 ) -> KnowledgeIngestResponse:
     service = EmbeddingService(session, client)
     chunks = await service.ingest_document(
@@ -180,7 +186,7 @@ async def ingest_knowledge(
 async def search_knowledge(
     payload: KnowledgeSearchRequest,
     session: SessionDep,
-    client: OpenRouterDep,
+    client: LLMDep,
 ) -> KnowledgeSearchResponse:
     service = EmbeddingService(session, client)
     categories = [payload.category.value] if payload.category else None

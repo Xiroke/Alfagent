@@ -55,9 +55,16 @@
     @apply antialiased;
   }
 
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
   body {
     @apply bg-canvas font-sans text-ink;
     font-feature-settings: "cv11" on, "ss01" on;
+    margin: 0;
   }
 
   h1,
@@ -66,8 +73,53 @@
     @apply font-bold tracking-tight text-ink;
   }
 
-  :focus-visible {
+  /* Prefer component-level focus rings. Keep a11y outline only where not overridden. */
+  :focus {
     outline: none;
-    box-shadow: var(--shadow-focus);
+  }
+
+  :focus-visible:not(input):not(textarea):not(select) {
+    outline: 2px solid color-mix(in srgb, var(--color-accent) 45%, transparent);
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+}
+
+/* Landing page entrance (Alfa-style home) */
+@keyframes landing-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.landing-fade {
+  animation: landing-fade-up 0.7s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+.landing-fade-delay-1 {
+  animation-delay: 80ms;
+}
+.landing-fade-delay-2 {
+  animation-delay: 140ms;
+}
+.landing-fade-delay-3 {
+  animation-delay: 200ms;
+}
+.landing-fade-delay-4 {
+  animation-delay: 260ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-fade,
+  .landing-fade-delay-1,
+  .landing-fade-delay-2,
+  .landing-fade-delay-3,
+  .landing-fade-delay-4 {
+    animation: none;
   }
 }

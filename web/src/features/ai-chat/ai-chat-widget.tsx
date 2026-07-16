@@ -5,40 +5,47 @@ import {
   type FormEvent,
   type KeyboardEvent,
 } from "react"
-import { PaperPlaneTilt } from "@phosphor-icons/react"
+import { PaperPlaneTilt, Trash } from "@phosphor-icons/react"
 
 import { cn } from "@/shared/lib/utils"
 
 import { streamChat } from "./api"
-
-interface ChatMessage {
-  id: string
-  role: "assistant" | "user"
-  content: string
-  pending?: boolean
-}
-
-const WELCOME: ChatMessage = {
-  id: "welcome",
-  role: "assistant",
-  content:
-    "Здравствуйте! Я помогу с регистрацией ООО: название, доли учредителей, юридический адрес и выбор налоговой системы. Спросите, например, про УСН или домашний адрес.",
-}
+import {
+  clearChatHistory,
+  historyForApi,
+  loadChatHistory,
+  saveChatHistory,
+} from "./history"
+import { MarkdownMessage } from "./markdown-message"
+import { WELCOME_MESSAGE, type ChatMessage } from "./types"
 
 function newId(): string {
   return crypto.randomUUID()
 }
 
 export function AiChatWidget({ className }: { className?: string }) {
-  const [messages, setMessages] = useState<ChatMessage[]>([WELCOME])
+  const [messages, setMessages] = useState<ChatMessage[]>(() => loadChatHistory())
   const [draft, setDraft] = useState("")
   const [sending, setSending] = useState(false)
   const [statusLabel, setStatusLabel] = useState<string | null>(null)
-  const bottomRef = useRef<HTMLDivElement>(null)
+  const listRef = useRef<HTMLDivElement>(null)
   const abortRef = useRef<AbortController | null>(null)
+  const hydratedRef = useRef(false)
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+    hydratedRef.current = true
+  }, [])
+
+  useEffect(() => {
+    if (!hydratedRef.current) return
+    saveChatHistory(messages)
+  }, [messages])
+
+  // Scroll only inside the chat panel — never the document.
+  useEffect(() => {
+    const el = listRef.current
+    if (!el) return
+    el.scrollTop = el.scrollHeight
   }, [messages, statusLabel])
 
   useEffect(() => {
@@ -57,15 +64,26 @@ export function AiChatWidget({ className }: { className?: string }) {
     )
   }
 
+  const handleClear = () => {
+    if (sending) return
+    abortRef.current?.abort()
+    setMessages(clearChatHistory())
+    setStatusLabel(null)
+    setDraft("")
+  }
+
   const handleSubmit = async (event?: FormEvent) => {
     event?.preventDefault()
     const text = draft.trim()
     if (!text || sending) return
 
+    const priorHistory = historyForApi(messages)
+
     const userMessage: ChatMessage = {
       id: newId(),
       role: "user",
       content: text,
+      createdAt: Date.now(),
     }
     const assistantId = newId()
     const assistantPlaceholder: ChatMessage = {
@@ -73,6 +91,7 @@ export function AiChatWidget({ className }: { className?: string }) {
       role: "assistant",
       content: "",
       pending: true,
+      createdAt: Date.now(),
     }
 
     setDraft("")
@@ -90,6 +109,7 @@ export function AiChatWidget({ className }: { className?: string }) {
     try {
       await streamChat({
         message: text,
+        history: priorHistory,
         signal: controller.signal,
         handlers: {
           onRouting: (data) => {
@@ -139,7 +159,7 @@ export function AiChatWidget({ className }: { className?: string }) {
                   ...msg,
                   content:
                     msg.content ||
-                    "Ответ пустой. Проверьте, что backend и OpenRouter доступны.",
+                    "Ответ пустой. Проверьте, что backend и API_KEY (Cloud.ru) доступны.",
                   pending: false,
                 }
               : msg,
@@ -175,6 +195,10 @@ export function AiChatWidget({ className }: { className?: string }) {
     }
   }
 
+  const canClear =
+    !sending &&
+    messages.some((msg) => msg.id !== WELCOME_MESSAGE.id || messages.length > 1)
+
   return (
     <aside
       className={cn(
@@ -190,10 +214,22 @@ export function AiChatWidget({ className }: { className?: string }) {
             <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
           </span>
         </div>
-        <p className="text-xs font-medium text-[#59606D]">Alfa AI</p>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={handleClear}
+            disabled={!canClear}
+            className="flex size-8 items-center justify-center rounded-lg text-[#8A919C] transition-colors hover:bg-[#F3F4F6] hover:text-[#0B1F35] disabled:cursor-not-allowed disabled:opacity-30"
+            aria-label="Очистить историю"
+            title="Очистить историю"
+          >
+            <Trash className="size-4" />
+          </button>
+          <p className="text-xs font-medium text-[#59606D]">Alfa AI</p>
+        </div>
       </header>
 
-      <div className="flex-1 space-y-4 overflow-y-auto p-4">
+      <div ref={listRef} className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain p-4">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -204,7 +240,7 @@ export function AiChatWidget({ className }: { className?: string }) {
           >
             <div
               className={cn(
-                "max-w-[85%] px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap",
+                "max-w-[85%] px-4 py-3",
                 message.role === "assistant" &&
                   "rounded-2xl rounded-tl-none bg-[#F3F4F6] text-[#0B1F35]",
                 message.role === "user" &&
@@ -218,7 +254,10 @@ export function AiChatWidget({ className }: { className?: string }) {
                   <span className="animate-pulse [animation-delay:300ms]">●</span>
                 </span>
               ) : (
-                message.content
+                <MarkdownMessage
+                  content={message.content}
+                  variant={message.role}
+                />
               )}
             </div>
           </div>
@@ -226,7 +265,6 @@ export function AiChatWidget({ className }: { className?: string }) {
         {statusLabel ? (
           <p className="px-1 text-xs text-[#8A919C]">{statusLabel}</p>
         ) : null}
-        <div ref={bottomRef} />
       </div>
 
       <form
@@ -235,7 +273,7 @@ export function AiChatWidget({ className }: { className?: string }) {
         }}
         className="shrink-0 border-t border-[#E5E7EB] px-3 py-3"
       >
-        <div className="flex items-center gap-2 rounded-xl bg-[#F3F4F6] px-3 py-2">
+        <div className="flex items-center gap-2 rounded-xl border border-transparent bg-[#F3F4F6] px-3 py-2 transition-[border-color,background-color] focus-within:border-[#D1D5DB] focus-within:bg-white">
           <input
             type="text"
             value={draft}
@@ -243,7 +281,7 @@ export function AiChatWidget({ className }: { className?: string }) {
             onKeyDown={onKeyDown}
             placeholder="Спросите про налоги, адрес или доли…"
             disabled={sending}
-            className="h-10 min-w-0 flex-1 bg-transparent text-sm text-[#0B1F35] outline-none placeholder:text-[#8A919C] disabled:opacity-60"
+            className="h-10 min-w-0 flex-1 bg-transparent text-sm text-[#0B1F35] outline-none ring-0 shadow-none placeholder:text-[#8A919C] focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:shadow-none focus-visible:ring-0 disabled:opacity-60"
             aria-label="Сообщение ассистенту"
           />
           <button

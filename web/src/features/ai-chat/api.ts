@@ -16,6 +16,7 @@ export type ChatStreamHandlers = {
 
 export type StreamChatOptions = {
   message: string
+  history?: Array<{ role: "user" | "assistant" | "system"; content: string }>
   companyProfile?: string
   signal?: AbortSignal
   handlers: ChatStreamHandlers
@@ -27,6 +28,7 @@ export type StreamChatOptions = {
  */
 export async function streamChat({
   message,
+  history,
   companyProfile,
   signal,
   handlers,
@@ -39,6 +41,7 @@ export async function streamChat({
     },
     body: JSON.stringify({
       message,
+      history: history ?? [],
       company_profile: companyProfile ?? null,
     }),
     signal,
@@ -46,12 +49,21 @@ export async function streamChat({
 
   if (!response.ok) {
     let detail = `HTTP ${response.status}`
-    try {
-      const body = (await response.json()) as { detail?: unknown }
-      if (typeof body.detail === "string") detail = body.detail
-      else if (body.detail != null) detail = JSON.stringify(body.detail)
-    } catch {
-      /* ignore */
+    if (response.status === 502) {
+      detail =
+        "Сервер недоступен (502). Запустите backend: uvicorn app.main:app --reload"
+    } else {
+      try {
+        const body = (await response.json()) as {
+          detail?: unknown
+          error?: { message?: string }
+        }
+        if (typeof body.detail === "string") detail = body.detail
+        else if (body.detail != null) detail = JSON.stringify(body.detail)
+        else if (body.error?.message) detail = body.error.message
+      } catch {
+        /* ignore */
+      }
     }
     throw new Error(detail)
   }

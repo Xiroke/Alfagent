@@ -4,7 +4,7 @@ from collections.abc import Sequence
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.ai.clients.openrouter import OpenRouterClient
+from app.ai.clients.llm import LLMClient
 from app.ai.rag.embeddings import EmbeddingService
 from app.domain.agents import AgentType, KnowledgeCategory
 from app.infrastructure.repositories.knowledge import RetrievedChunk
@@ -28,7 +28,7 @@ class RAGRetriever:
     def __init__(
         self,
         session: AsyncSession,
-        client: OpenRouterClient,
+        client: LLMClient,
     ) -> None:
         self._embeddings = EmbeddingService(session, client)
 

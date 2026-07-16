@@ -7,7 +7,7 @@ from typing import Any, Sequence
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.ai.clients.openrouter import OpenRouterClient
+from app.ai.clients.llm import LLMClient
 from app.core.config import Settings, get_settings
 from app.domain.agents import KnowledgeCategory
 from app.infrastructure.repositories.knowledge import KnowledgeRepository, RetrievedChunk
@@ -18,12 +18,12 @@ _WHITESPACE_RE = re.compile(r"\s+")
 
 
 class EmbeddingService:
-    """Creates embeddings via OpenRouter and persists / searches knowledge chunks."""
+    """Creates embeddings via Cloud.ru Foundation Models and persists / searches knowledge chunks."""
 
     def __init__(
         self,
         session: AsyncSession,
-        client: OpenRouterClient,
+        client: LLMClient,
         settings: Settings | None = None,
     ) -> None:
         self._session = session

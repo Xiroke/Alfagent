@@ -1,0 +1,25 @@
+﻿headings=8 texts=717 cards=65 images=154
+wrote C:\home\Alfagent\web\public\landing\_parsed.json
+H2: ┬√сшЁрщЄх ыєў°хх
+H2: ╨рёёўшЄрщЄх т√уюфє
+H2: ═р°х яЁхфыюцхэшх
+H2: ═р°х яЁхфыюцхэшх
+H2: ╤хЁтшё√
+H2: ╧юы№чєщЄхё№ т√уюфэ√ьш яЁхфыюцхэш ьш т эр°шї ёхЁтшёрї
+H2: ╬ срэъх
+H2: ╫шЄрщЄх уыртэюх юс шэтхёЄшЎш ї
+--- cards ---
+.\.venv\Scripts\python.exe : Traceback (most recent call last):
+C:\Users\user\AppData\Local\Temp\ps-script-7633346a-d196-49f4-a95e-28c91b809282.ps1:108 знак:22
++ ... e\Alfagent; .\.venv\Scripts\python.exe scripts\parse_alfa_html.py 2>& ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\home\Alfagent\scripts\parse_alfa_html.py", line 89, in <module>
+    print(f"- {c['title'][:50]} | {c['subtitle'][:40]} | {c['img'][-60:]}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2011' in position 7: character maps to <undefined>

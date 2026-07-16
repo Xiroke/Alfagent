@@ -4,7 +4,7 @@ from collections.abc import AsyncIterator, Sequence
 from dataclasses import dataclass
 from typing import Protocol
 
-from app.ai.clients.openrouter import ChatMessage, OpenRouterClient
+from app.ai.clients.llm import ChatMessage, LLMClient
 from app.ai.prompts.templates import build_user_prompt, get_agent_system_prompt
 from app.domain.agents import AgentType
 from app.infrastructure.repositories.knowledge import RetrievedChunk
@@ -15,6 +15,7 @@ class AgentReplyContext:
     user_message: str
     rag_chunks: Sequence[RetrievedChunk]
     company_profile: str | None = None
+    history: Sequence[ChatMessage] = ()
 
 
 class Agent(Protocol):
@@ -26,7 +27,7 @@ class Agent(Protocol):
 
     async def stream(
         self,
-        client: OpenRouterClient,
+        client: LLMClient,
         ctx: AgentReplyContext,
         *,
         model: str | None = None,
@@ -40,8 +41,17 @@ class BaseAgent:
         from app.ai.rag.retriever import RAGRetriever
 
         rag_context = RAGRetriever.format_context(ctx.rag_chunks)
-        return [
+        messages: list[ChatMessage] = [
             {"role": "system", "content": get_agent_system_prompt(self.agent_type)},
+        ]
+        # Prior turns (client history) — keep short to stay within context.
+        for turn in ctx.history[-12:]:
+            role = turn.get("role")
+            content = (turn.get("content") or "").strip()
+            if role not in {"user", "assistant"} or not content:
+                continue
+            messages.append({"role": role, "content": content})
+        messages.append(
             {
                 "role": "user",
                 "content": build_user_prompt(
@@ -50,11 +60,12 @@ class BaseAgent:
                     company_profile=ctx.company_profile,
                 ),
             },
-        ]
+        )
+        return messages
 
     async def stream(
         self,
-        client: OpenRouterClient,
+        client: LLMClient,
         ctx: AgentReplyContext,
         *,
         model: str | None = None,

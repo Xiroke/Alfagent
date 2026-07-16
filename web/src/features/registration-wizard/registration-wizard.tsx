@@ -4,6 +4,7 @@ import { Button } from "@/shared/components/ui/button"
 import { Separator } from "@/shared/components/ui/separator"
 
 import { WizardStepper } from "./components/wizard-stepper"
+import { DocumentPrefillUpload } from "./components/document-prefill-upload"
 import { useWizardNavigation } from "./hooks/use-wizard-navigation"
 import { AddressStep } from "./steps/address-step"
 import { CompanyStep } from "./steps/company-step"
@@ -11,20 +12,20 @@ import { FoundersStep } from "./steps/founders-step"
 import { TaxStep } from "./steps/tax-step"
 import { useRegistrationWizardStore } from "./store"
 
-function StepContent() {
+function StepContent({ revision }: { revision: number }) {
   const { currentStep } = useWizardNavigation()
 
   switch (currentStep) {
     case 0:
-      return <CompanyStep />
+      return <CompanyStep key={`company-${revision}`} />
     case 1:
-      return <FoundersStep />
+      return <FoundersStep key={`founders-${revision}`} />
     case 2:
-      return <AddressStep />
+      return <AddressStep key={`address-${revision}`} />
     case 3:
-      return <TaxStep />
+      return <TaxStep key={`tax-${revision}`} />
     default:
-      return <CompanyStep />
+      return <CompanyStep key={`company-${revision}`} />
   }
 }
 
@@ -32,6 +33,7 @@ function StepContent() {
 export function RegistrationWizard() {
   const resetWizard = useRegistrationWizardStore((s) => s.resetWizard)
   const companyName = useRegistrationWizardStore((s) => s.draft.company.name)
+  const draftRevision = useRegistrationWizardStore((s) => s.draftRevision)
 
   return (
     <div className="mx-auto w-full max-w-3xl">
@@ -61,9 +63,11 @@ export function RegistrationWizard() {
         </div>
       ) : null}
 
+      <DocumentPrefillUpload className="mb-6" />
+
       <WizardStepper />
       <Separator className="my-7" />
-      <StepContent />
+      <StepContent revision={draftRevision} />
     </div>
   )
 }

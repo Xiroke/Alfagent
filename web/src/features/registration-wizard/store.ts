@@ -57,6 +57,7 @@ export interface RegistrationWizardState {
   currentStep: WizardStepId
   completedSteps: WizardStepId[]
   draft: WizardDraft
+  draftRevision: number
   setStep: (step: WizardStepId) => void
   markStepCompleted: (step: WizardStepId) => void
   setCompany: (company: CompanyDraft) => void
@@ -66,6 +67,7 @@ export interface RegistrationWizardState {
   updateFounder: (id: string, patch: Partial<FounderDraft>) => void
   setAddress: (address: AddressDraft) => void
   setTax: (tax: TaxDraft) => void
+  applyPrefill: (draft: WizardDraft) => void
   resetWizard: () => void
   progressPercent: () => number
 }
@@ -83,6 +85,7 @@ export const useRegistrationWizardStore = create<RegistrationWizardState>()(
       currentStep: 0,
       completedSteps: [],
       draft: initialDraft,
+      draftRevision: 0,
 
       setStep: (step) => set({ currentStep: step }),
 
@@ -149,6 +152,14 @@ export const useRegistrationWizardStore = create<RegistrationWizardState>()(
           draft: { ...state.draft, tax },
         })),
 
+      applyPrefill: (draft) =>
+        set((state) => ({
+          currentStep: 0,
+          completedSteps: [],
+          draft,
+          draftRevision: state.draftRevision + 1,
+        })),
+
       resetWizard: () =>
         set({
           currentStep: 0,
@@ -159,6 +170,7 @@ export const useRegistrationWizardStore = create<RegistrationWizardState>()(
             address: defaultAddress,
             tax: defaultTax,
           },
+          draftRevision: 0,
         }),
 
       progressPercent: () => {
