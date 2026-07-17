@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowCounterClockwise, DownloadSimple } from "@phosphor-icons/react"
+import { ArrowCounterClockwise, ArrowLeft, DownloadSimple } from "@phosphor-icons/react"
 
 import { downloadProtocolFromDraft } from "@/features/registration-wizard/api/protocol"
 import { Button } from "@/shared/components/ui/button"
@@ -52,7 +52,18 @@ export function RegistrationSummary() {
               : "Проверьте данные. Можно загрузить документ заново или пройти диалог с нуля."}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={backToInterview}
+            aria-label={summaryPreview ? "Вернуться к диалогу" : "Продолжить диалог"}
+            title={summaryPreview ? "Вернуться к диалогу" : "Продолжить диалог"}
+            className="px-2.5"
+          >
+            <ArrowLeft className="size-4" />
+          </Button>
           <Button
             type="button"
             variant="default"
@@ -64,9 +75,6 @@ export function RegistrationSummary() {
             {downloading ? "Формируем…" : "Скачать протокол"}
           </Button>
           <ChatDocumentUpload />
-          <Button type="button" variant="outline" size="sm" onClick={backToInterview}>
-            {summaryPreview ? "Вернуться к диалогу" : "Продолжить диалог"}
-          </Button>
           <Button type="button" variant="outline" size="sm" onClick={reset}>
             <ArrowCounterClockwise className="size-4" />
             Сначала
