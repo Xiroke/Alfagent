@@ -151,12 +151,17 @@ if bento_at >= 0:
         )
         alfa_html = alfa_html[:a_start] + window + alfa_html[vend:]
 
-# Minimal page chrome (no Alfagent top bar)
+# Minimal page chrome + fit-to-width on small screens (desktop dump stays intact)
 hide_css = """
 <style>
-  html, body { margin: 0; padding: 0; background: #121212; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #121212;
+  }
   [role="alert"].plate__component_fesrv,
   .b0kHiW.a0kHiW { display: none !important; }
+
   [data-test-id="bentoBanner"] [data-test-id="video-background-container"] {
     background-color: #B36BFF !important;
   }
@@ -177,20 +182,93 @@ hide_css = """
     object-fit: contain !important;
     object-position: right bottom !important;
   }
+
+  /*
+    Desktop Alfa dump is ~1200px wide. On narrower viewports we scale the whole
+    page to fit — layout/composition stay identical (no broken card stacks).
+  */
+  #alfa {
+    transform-origin: top left;
+    will-change: transform;
+  }
+  html.alfagent-scaled,
+  html.alfagent-scaled body {
+    overflow-x: hidden;
+    width: 100%;
+  }
 </style>
+"""
+
+fit_script = """
+<script>
+(function () {
+  var DESIGN_WIDTH = 1200;
+  var alfa = null;
+
+  function fit() {
+    alfa = alfa || document.getElementById('alfa');
+    if (!alfa) return;
+
+    var vw = window.innerWidth || document.documentElement.clientWidth;
+    if (vw >= DESIGN_WIDTH) {
+      document.documentElement.classList.remove('alfagent-scaled');
+      alfa.style.width = '';
+      alfa.style.transform = '';
+      document.body.style.height = '';
+      document.body.style.overflowX = '';
+      return;
+    }
+
+    var scale = vw / DESIGN_WIDTH;
+    document.documentElement.classList.add('alfagent-scaled');
+    alfa.style.width = DESIGN_WIDTH + 'px';
+    alfa.style.transform = 'scale(' + scale + ')';
+    // Transform does not shrink layout box — pin body height to scaled content.
+    var h = alfa.scrollHeight * scale;
+    document.body.style.height = Math.ceil(h) + 'px';
+    document.body.style.overflowX = 'hidden';
+  }
+
+  var scheduled = false;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(function () {
+      scheduled = false;
+      fit();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fit);
+  } else {
+    fit();
+  }
+  window.addEventListener('resize', schedule, { passive: true });
+  window.addEventListener('orientationchange', function () {
+    setTimeout(fit, 150);
+  });
+  // Images / late layout shifts
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(schedule).catch(function () {});
+  }
+})();
+</script>
 """
 
 doc = f"""<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Alfagent — сервисы Альфа-Банка</title>
   {"".join(unique_css)}
   {hide_css}
 </head>
 <body>
 {alfa_html}
+{fit_script}
 <script>
   document.addEventListener('click', function (e) {{
     var a = e.target && e.target.closest ? e.target.closest('a') : null;
